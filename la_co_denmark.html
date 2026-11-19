@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lá cờ Denmark - CSS Positioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #c0392b;
+        }
+
+        /* Nền đỏ, chữ thập trắng lệch về bên trái */
+        .denmark {
+            position: relative;          /* gốc cho 2 thanh chữ thập */
+            width: 420px;
+            height: 280px;
+            background: #c0392b;
+            border: 1px solid #ccc;
+        }
+
+        /* Thanh dọc của chữ thập (lệch trái) */
+        .thanh-doc {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 120px;
+            width: 45px;
+            background: #fff;
+        }
+
+        /* Thanh ngang của chữ thập (căn giữa theo chiều dọc) */
+        .thanh-ngang {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 45px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h2>Denmark</h2>
+    <div class="denmark">
+        <div class="thanh-doc"></div>
+        <div class="thanh-ngang"></div>
+    </div>
+</body>
+</html>
